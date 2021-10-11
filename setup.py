@@ -7,7 +7,9 @@ import distutils.command.build
 import setuptools.command.build_py
 import setuptools.command.install_lib
 import setuptools.command.sdist
+
 from setuptools import setup
+from setuptools_rust import Binding, RustExtension
 from distutils import log
 from distutils.cmd import Command
 from distutils.dep_util import newer
@@ -150,5 +152,7 @@ setup(name = "pyDistAlgo",
           'build_py'    : DABuildPyCommand,
           'install_lib' : DAInstallCommand,
           'sdist'       : DASdistCommand,
-      }
+      },
+
+      rust_extensions=[RustExtension("distalgo._da", binding=Binding.PyO3)],
 )

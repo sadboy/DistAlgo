@@ -1,0 +1,16 @@
+[package]
+name = "distalgo"
+version = "0.1.0"
+authors = ["DistAlgo Team"]
+edition = "2018"
+
+[lib]
+name = "_da"
+crate-type = ["cdylib"]
+
+[dependencies]
+rustpython-parser = { path = "./src/parser" }
+
+[dependencies.pyo3]
+version = "0.14.5"
+features = ["extension-module"]

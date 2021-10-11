@@ -4,5 +4,7 @@ include doc/screenshot.png
 include README.md
 include setup.py
 include LICENSE
+include Cargo.toml
 
 recursive-include da/examples __init__.py *.da
+recursive-include src *
